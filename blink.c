@@ -219,12 +219,14 @@ while(1) {
       //  }
        if(gpio_get_level(LOW_BEAM) == 1)
           {
-           sort(spi, BLUE, 0x3f00, 0x3f00, 4096);
-           }
+           sort(spi, INDICATOR, 0x7f00, 0x7f00, 16389);
+
+                      }
        if (gpio_get_level(LOW_BEAM) == 0)
           {
                    //PICTURE = extern RED;
-                   sort(spi, INDICATOR, 0x7f00, 0x7f00, 16389);
+          
+                   sort(spi, BLUE, 0x3f00, 0x3f00, 4096);
                    //sort(spi, INDICATOR_TWO, 0x7f00, 0x3f20, 4096);
                    //sort(spi, INDICATOR_THREE, 0x7f00, 0x5f40, 4096);
                    //sort(spi, INDICATOR_FOUR, 0x7f00, 0x7f60, 4096);
